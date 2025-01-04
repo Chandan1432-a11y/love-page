@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do You Love Me?</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    .container {
+      text-align: center;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .yes-btn {
+      background-color: #4caf50;
+      color: white;
+    }
+    .no-btn {
+      background-color: #f44336;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Do you love me?</h1>
+    <button class="button yes-btn" onclick="yesClicked()">Yes</button>
+    <button class="button no-btn" id="noButton" onmouseover="moveNoButton()">No</button>
+  </div>
+
+  <script>
+    function yesClicked() {
+      alert("Yes, I knew it! 🥹🥹🥹🥹🥹");
+    }
+
+    function moveNoButton() {
+      const noButton = document.getElementById('noButton');
+      const randomX = Math.random() * 300 - 150; // Random X offset
+      const randomY = Math.random() * 300 - 150; // Random Y offset
+      noButton.style.transform = translate(${randomX}px, ${randomY}px);
+    }
+  </script>
+</body>
+</html>
