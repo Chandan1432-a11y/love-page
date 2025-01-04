@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌹 Do You Love Me? 💖</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #ffebf0;
+      overflow: hidden;
+    }
+    .container {
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #ff4b81;
+    }
+    .button {
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .yes-btn {
+      background-color: #ff69b4;
+      color: white;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5);
+    }
+    .yes-btn:hover {
+      transform: scale(1.1);
+      background-color: #ff1493;
+    }
+    .no-btn {
+      background-color: #ff6347;
+      color: white;
+      position: relative;
+    }
+    .no-btn:hover {
+      transform: scale(1.1) rotate(10deg);
+    }
+    .love-note {
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: #b22222;
+    }
+    .gif-container {
+      margin-top: 20px;
+    }
+    .rose-gif {
+      width: 150px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌸 Do you love me? 🌸</h1>
+    <button class="button yes-btn" onclick="yesClicked()">Yes 💖</button>
+    <button class="button no-btn" id="noButton" onmouseover="moveNoButton()">No ❌</button>
+    
+    <div class="gif-container">
+      <img class="rose-gif" src="https://media.giphy.com/media/3o6ozjGQV08RDHifKQ/giphy.gif" alt="Rose proposing">
+    </div>
+    
+    <div class="love-note">
+      💌 Dear love, you are the sunshine of my life. Will you be mine forever? 💞
+    </div>
+  </div>
+
+  <script>
+    function yesClicked() {
+      alert("Yay! I knew you loved me! 😍💖🌹");
+    }
+
+    function moveNoButton() {
+      const noButton = document.getElementById('noButton');
+      const randomX = Math.random() * 300 - 150; // Random X offset
+      const randomY = Math.random() * 300 - 150; // Random Y offset
+      noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    }
+  </script>
+</body>
+</html>
